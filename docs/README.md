@@ -1,5 +1,7 @@
 # 영웅의 전장 — 스무 개의 역사 전투
 
+**▶ 플레이: <https://gyuha.com/heroes-battlefield/>** (GitHub Pages, `main` 에 푸시하면 자동 배포)
+
 three.js 로 만든 3D 실시간 액션·부대 지휘 게임이다. 플레이어는 지휘관이 되어 직접 싸우는 동시에 여러 부대를 지휘해 역사 속 전투 20개를 치른다. 모든 화면과 메뉴는 한국어이고, 모델·문장·초상·효과음은 외부 에셋 없이 코드로 생성한다.
 
 ---
@@ -32,6 +34,8 @@ npm run sim      # 전투 20개 헤드리스 시뮬레이션(균형 점검). 특
 npm run build    # 배포용 빌드 → dist/
 npm run preview  # 빌드 결과 미리보기
 ```
+
+배포: `.github/workflows/deploy.yml` 이 `main` 푸시마다 테스트 → 빌드 → GitHub Pages 배포를 수행한다. `vite.config.js` 는 하위 경로에서도 동작하도록 상대 경로(`base: './'`)로 빌드한다.
 
 요구 사항: Node.js 18 이상(Vite 6 기준), WebGL 을 지원하는 브라우저.
 
